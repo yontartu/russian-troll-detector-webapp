@@ -6,11 +6,11 @@ import re
 import sys
 import time
 
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('averaged_perceptron_tagger')
-nltk.download('wordnet')
+# import nltk
+# nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('averaged_perceptron_tagger')
+# nltk.download('wordnet')
 from nltk import FreqDist, word_tokenize
 from nltk.collocations import *
 from nltk.corpus import stopwords
