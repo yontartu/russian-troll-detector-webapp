@@ -1,7 +1,5 @@
 import flask
-from flask import request
-from predictor_api import make_prediction
-from flask import jsonify
+from flask import request, jsonify
 from functions_for_flask_app import *
 
 
@@ -34,7 +32,6 @@ def predict():
     # "form name (as set in template)" (key): "string in the textbox" (value)
     print(request.args)
     if(request.args):
-        # x_input, predictions = make_prediction(request.args['chat_in'])
         x_input, pred_class, pred_proba = make_prediction_on_new_tweet(request.args['chat_in'])
         print(x_input)
         return flask.render_template('predictor.html',
@@ -44,20 +41,10 @@ def predict():
     else: 
         #For first load, request.args will be an empty ImmutableDict type. If this is the case,
         # we need to pass an empty string into make_prediction function so no errors are thrown.
-        # x_input, predictions = make_prediction('')
-        # return flask.render_template('predictor.html',
-        #                              chat_in=x_input,
-        #                              prediction=predictions)
         return flask.render_template('predictor.html',
                                      chat_in=" ",
                                      prediction_class=" ",
                                      prediction_prob=" ")
-
-
-# @app.route("/test-page")
-# def test_page():
-#     return str(make_prediction_on_new_tweet("a b c "))
-
 
 # Start the server, continuously listen to requests.
 
