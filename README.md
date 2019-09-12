@@ -1,6 +1,6 @@
 # Web App for Predicting Russian Troll Tweets
 
-This [web app](https://russian-troll-detector.herokuapp.com/) is a companion to my project on using machine learning to [classify tweets from Russian troll accounts](https://github.com/yontartu/bot-vs-human).
+This [web app](https://russian-troll-detector.herokuapp.com/) is a companion to my project using machine learning to [classify tweets from Russian troll accounts](https://github.com/yontartu/bot-vs-human).
 
 It's built using `flask` and deployed to `heroku`.
 
