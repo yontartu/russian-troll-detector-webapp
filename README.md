@@ -1,6 +1,29 @@
-# Twitch Harassment Classifier Website
-Showcases harassment classifier trained on 160,000+ Wikipedia comments from a Kaggle dataset. Primary goal is to pipe live Twitch chat from a streaming channel and classify comments for toxicity in real time.
+# Web App for Predicting Russian Troll Tweets
 
-Model is currently live and available on this [Twitch channel](https://www.twitch.tv/datatestdummy/). To see predictions, type toxic chat into the chatbar on the right of the screen. Note: Website may take 10 seconds to load if its heroku node is currently sleeping due to inactivity.
+This [web app](https://russian-troll-detector.herokuapp.com/) is a companion to my project on using machine learning to [classify tweets from Russian troll accounts](https://github.com/yontartu/bot-vs-human).
 
-By Jeremy Chow and Randy Macaraeg
+It's built using `flask` and deployed to `heroku`.
+
+## Set-Up Instructions
+
+#### 1. Set the `FLASK_APP` environment variable, and run flask
+
+```bash
+$ export FLASK_APP=app.py
+$ export FLASK_ENV=development
+$ flask run
+```
+
+#### 2. Create a new heroku app
+
+```bash
+$ heroku create russian-trolls-detector
+```
+
+#### 3. Make modifications to the app, add and commit changes, and push to `heroku` remote
+
+```bash
+$ git add .
+$ git commit -m "a commit message"
+$ git push heroku master
+```
