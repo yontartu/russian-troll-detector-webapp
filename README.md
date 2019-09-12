@@ -25,5 +25,5 @@ $ heroku create russian-trolls-detector
 ```bash
 $ git add .
 $ git commit -m "a commit message"
-$ git push heroku master
+$ git push heroku master 
 ```
